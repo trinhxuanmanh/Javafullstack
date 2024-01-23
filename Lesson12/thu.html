@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const crypto = require('crypto');
+
+// Khóa DES có 8 byte
+const key = Buffer.from('mySecretKey');
+
+// Dữ liệu cần mã hóa
+const plaintext = 'TRUONG DAI HOC CONG NGHIEP HA NOI';
+
+// Tạo đối tượng cipher với thuật toán DES và khóa
+const cipher = crypto.createCipheriv('des-ecb', key, null);
+
+// Mã hóa dữ liệu
+let encryptedText = cipher.update(plaintext, 'utf8', 'hex');
+encryptedText += cipher.final('hex');
+
+console.log('Encrypted text:', encryptedText);
+
+// Tạo đối tượng decipher với thuật toán DES và khóa
+const decipher = crypto.createDecipheriv('des-ecb', key, null);
+
+// Giải mã dữ liệu
+let decryptedText = decipher.update(encryptedText, 'hex', 'utf8');
+decryptedText += decipher.final('utf8');
+
+console.log('Decrypted text:', decryptedText);
+    </script>
+</body>
+</html>

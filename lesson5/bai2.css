@@ -1,0 +1,27 @@
+.header{
+    border: 1px solid#e9e95e;
+    background: #fdfdbf;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 0 800px;
+}
+.menu{
+    display: flex;
+    
+}
+.left{
+    display: flex;
+    width: 30%;
+    background: #fd8989;
+    height: 500px;
+    align-items: center;
+}
+.content{
+    display: flex;
+    width: 70%;
+    background: #92f8c7;
+    height: 500px;
+    align-content: center;
+}

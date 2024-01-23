@@ -1,0 +1,28 @@
+.navigation1 {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #eca15e;
+    padding: 8px 12px;
+}
+
+.navigation1-pages {
+    display: flex;
+}
+ư
+.navigation2 {
+    border: 1px solid black;
+    padding: 4px 10px;
+}
+
+.navigation1-page {
+    border: 1px solid black;
+    padding: 4px 10px;
+}
+
+.navigation1-page {
+    border-right: none;
+}
+
+.navigation1-page:last-child {
+    border-right: 1px solid black;
+}

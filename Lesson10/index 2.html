@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div style="display: flex">
+			<div style="margin-right: 10px">
+				<div>
+					<div><label>Url</label></div>
+					<input type="text" id="url" />
+				</div>
+				<div>
+					<div><label>Chiều rộng (px)</label></div>
+					<input type="text" id="width" />
+				</div>
+				<div>
+					<div><label>Chiều cao (px)</label></div>
+					<input type="text" id="height" />
+				</div>
+				<div>
+					<div><label>Bo góc (px)</label></div>
+					<input type="text" id="radius" />
+				</div>
+				<div>
+					<div><label>Alt</label></div>
+					<input type="text" id="alt" />
+				</div>
+			</div>
+			<img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvHiMePqz1GKwY38h5_Nfx0ga731PEC0l7A&usqp=CAU"
+				width="100px"
+				height="100px"
+				id="image"
+			/>
+		</div>
+
+		<script>
+			document.getElementById('url').onchange = function () {
+				const url = document.getElementById('url').value;
+
+				document.getElementById('image').setAttribute('src', url);
+			};
+			document.getElementById('width').onchange = function () {
+				const width = document.getElementById('width').value;
+
+				document.getElementById('image').setAttribute('width', width);
+			};
+			document.getElementById('height').onchange = function () {
+				const height = document.getElementById('height').value;
+
+				document.getElementById('image').setAttribute('height', height);
+			};
+			document.getElementById('radius').onchange = function () {
+				const radius = document.getElementById('radius').value;
+
+				document.getElementById('image').style.borderRadius = radius + 'px';
+			};
+			document.getElementById('alt').onchange = function () {
+				const alt = document.getElementById('alt').value;
+
+				document.getElementById('image').setAttribute('alt', alt);
+			};
+		</script>
+	</body>
+</html>

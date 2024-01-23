@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Example</title>
+
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			.header {
+				padding: 16px 12px;
+				border: 1px solid #ec6e21;
+				background: #fdc37e;
+				text-align: center;
+			}
+
+			.feature {
+				width: 19%;
+				height: 150px;
+				border: 1px solid #f95d5d;
+				background: #ffbdbd;
+				box-sizing: border-box;
+				margin: 8px;
+				margin-bottom: 0px;
+				/* text-align: center; */
+			}
+
+			.features {
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			.image {
+				width: 49%;
+				height: 200px;
+				border: 1px solid black;
+				background: bisque;
+				margin-top: 12px;
+			}
+
+			.images {
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+			}
+
+			.content-left {
+				width: 49%;
+				border: 1px solid black;
+				background: #33893396;
+			}
+
+			.content-right {
+				width: 49%;
+			}
+
+			.contents {
+				justify-content: space-evenly;
+				margin-top: 12px;
+			}
+
+			.content.content-2 {
+				height: 200px;
+				border: 1px solid black;
+				background: indianred;
+			}
+
+			.content.content-3 {
+				height: 120px;
+				border: 1px solid black;
+				background: #ea9999;
+				margin-top: 12px;
+			}
+
+			.element-center {
+				align-items: center;
+				justify-content: center;
+			}
+
+			.d-flex {
+				display: flex;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<p>Header</p>
+			</div>
+
+			<div class="features d-flex">
+				<div class="feature element-center d-flex">Feature 1</div>
+				<div class="feature element-center d-flex">Feature 2</div>
+				<div class="feature element-center d-flex">Feature 3</div>
+				<div class="feature element-center d-flex">Feature 4</div>
+				<div class="feature element-center d-flex">Feature 5</div>
+				<div class="feature element-center d-flex">Feature 6</div>
+				<div class="feature element-center d-flex">Feature 7</div>
+				<div class="feature element-center d-flex">Feature 8</div>
+				<div class="feature element-center d-flex">Feature 9</div>
+				<div class="feature element-center d-flex">Feature 10s</div>
+			</div>
+
+			<div class="images d-flex">
+				<div class="image element-center d-flex">Image 1</div>
+				<div class="image element-center d-flex">Image 2</div>
+				<div class="image element-center d-flex">Image 3</div>
+				<div class="image element-center d-flex">Image 4</div>
+			</div>
+
+			<div class="contents d-flex">
+				<div class="content-left element-center">Content 1</div>
+				<div class="content-right">
+					<div class="content content-2 element-center d-flex">Content 2</div>
+					<div class="content content-3 element-center d-flex">Content 3</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

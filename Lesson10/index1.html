@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div style="display: flex">
+			<div style="margin-right: 10px">
+				<div>
+					<div><label>Url</label></div>
+					<input type="text" id="url" />
+				</div>
+			</div>
+			<img
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvHiMePqz1GKwY38h5_Nfx0ga731PEC0l7A&usqp=CAU"
+				width="100px"
+				height="100px"
+				id="image"
+			/>
+		</div>
+
+		<script>
+			document.getElementById('url').onchange = function () {
+				const url = document.getElementById('url').value;
+
+				document.getElementById('image').setAttribute('src', url);
+			};
+		</script>
+	</body>
+</html>

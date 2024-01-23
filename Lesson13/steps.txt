@@ -1,0 +1,65 @@
+CRUD
++Read
+	[
+		{
+			id: 1,
+			name: "Nguyễn Văn A',
+			gender: "nam",
+			math_score: 10,
+			english_score: 10,
+			literature_score: 10,
+		},
+		{
+			id: 2,
+			name: "Trần Thị B',
+			gender: "girl",
+			math_score: 8,
+			english_score: 8,
+			literature_score: 9,
+		},
+	]
+	=> Danh sách học sinh
+	=> In danh sách các phần tử trong mảng lên trên html
+
+
++Create
+	B1: Gán sự kiện onclick cho button Create student
+	B2: Nội dung xử lý trong hàm
+		-Lấy được thông tin người dùng đã nhập ở các ô input
+		-Tạo một object mới
+		-Thêm object vào trong mảng
+	B3: Đóng gói đoạn code read thành function, sau khi thêm object
+		vào trong mảng => gọi lại hàm read
+	B4: Clear input
+		
++Delete
+	B1: Gán sự kiện onclick cho button Delete
+	B2: Tìm được index của phần tử đó trong mảng
+	B3: Xóa phần tử đó khỏi mảng
+	B4: Gọi lại hàm read
+	
++Update
+	Phần 1:
+		B1: Gán sự kiện onclick cho button Update
+		B2: Tìm được index của phần tử đó trong mảng
+		B3: Hiển thị thông tin của học sinh đó lên các ô input tương ứng
+		B4: Disabled input nhập id (không cho người dùng sửa id)
+		B5: Ẩn button Create student và hiện ra button Update student
+	Phần 2: 
+		B1: Gán sự kiện onclick cho button Update student
+		B2: Xử lý trong hàm:
+			-Lấy được các thông tin người dùng vừa chỉnh sửa trong input
+			-Cập nhật thông tin mới vào trong array
+		B3: Gọi lại hàm read
+		B4: Clear input
+		B5: Ẩn button Update student và hiện ra button Create student
+		B6: Enabled lại input nhập id
+		
+Kiểu search 1:
+	Mô tả: Khi click vào button search mới bắt đầu tìm kiếm
+	Các bước làm:
+		Bước 1: Gán được sự kiện onclick cho button search
+		Bước 2: Xử lý trong hàm
+			+Lấy được keyword người dùng nhập trong trong input keyword
+			+Sử dụng hàm filter để lọc các thông tin phù hợp
+			+Gọi lại hàm read và truyền kết quả trả về của hàm filter
